@@ -1,0 +1,212 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #1c1c1c; /* Dark background for a sleek look */
+    color: #e0e0e0; /* Light text for contrast */
+    line-height: 1.6;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    background-color: #111; /* Dark header background */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+header:hover {
+    background-color: #333; /* Slightly lighter on hover */
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6600; /* Futuristic orange for contrast */
+    transform: translateY(-5px);
+}
+
+/* Cart Link in Header */
+.cart {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.cart span {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #ff6600;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* Shop Page Layout */
+section {
+    padding: 120px 20px 20px; /* Account for fixed header */
+    max-width: 1200px;
+    margin: 20px auto;
+    color: black; /* Change to black text for better contrast */
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/* Product Grid */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.product {
+    background-color: #222; /* Dark background for a sleek product card */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    width: calc(20% - 24px); /* Make each product take 20% of the available space */
+}
+
+.product:hover {
+    background: linear-gradient(135deg, #ff6600, #ffac33); /* Smooth gradient */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Slightly lift on hover */
+}
+
+.product h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.product p {
+    font-size: 1.4rem;
+    color: #e0e0e0;
+}
+
+.add-to-cart {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin: 20px auto 0;
+    width: 100%;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Cart Section */
+#cart {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#cart-quantity {
+    font-weight: bold;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Remove Button Styling */
+.remove-from-cart {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin: 20px auto 0;
+    width: 100%;
+}
+
+.remove-from-cart:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 24px); /* For tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%; /* For mobile devices */
+    }
+}
